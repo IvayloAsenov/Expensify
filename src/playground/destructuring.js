@@ -2,14 +2,24 @@
     Object destructuring
 */
 
-// const person = {
-//     name: 'Ivaylo',
-//     age: 21,
-//     location: {
-//         city: 'Montreal',
-//         temp: -40
-//     }
-// };
+const test = {
+    hey: 'tet'
+};
+
+const person = {
+    name: 'Ivaylo',
+    age: 21,
+    location: {
+        city: 'Montreal',
+        temp: -40
+    }
+};
+
+const funa = ({name, location}, {hey}) => {
+    console.log(`${name} and ${location.city} and ${hey}`);
+};
+
+funa(...person, ...test);
 
 // const {name, age} = person;
 
