@@ -4,5 +4,12 @@
     color: white;
     font-size: $font-size-large;
     font-weight: 300;
+    line-height: 1;
     padding: $s-size;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button--link {
+    background: none;
 }
