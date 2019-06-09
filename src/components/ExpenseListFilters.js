@@ -7,7 +7,7 @@ export class ExpenseListFilters extends React.Component {
     state = {
         calendarFocused: null
     };
-    
+
     onDatesChange = ({startDate, endDate}) => {
         this.props.setStartDate(startDate);
         this.props.setEndDate(endDate);
@@ -33,13 +33,17 @@ export class ExpenseListFilters extends React.Component {
             <div className="content-container">
                 <div className="input-group">
                     <div className="input-group__item">
-                        <input type = 'text' 
+                        <input
+                        type = 'text'
+                        className = 'text-input'
+                        placeholder = 'Search expenses'
                         value = {this.props.filters.text}
                         onChange = {this.onTextChange}
                         />
                     </div>
                     <div className="input-group__item">
-                        <select 
+                        <select
+                        className = 'select'
                         value = {this.props.filters.sortBy}
                         onChange = {this.onSortChange}>
                         <option value = 'date'>Date</option>
@@ -58,10 +62,10 @@ export class ExpenseListFilters extends React.Component {
                         isOutsideRange = {() => false}
                         />
                     </div>
-                </div>         
+                </div>
             </div>
         );
-    }  
+    }
 };
 
 const mapStateToProps = (state) => {
